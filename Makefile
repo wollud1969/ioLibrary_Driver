@@ -1,4 +1,5 @@
 CC=arm-none-eabi-gcc
+AR=arm-none-eabi-ar
 
 CFLAGS=-iquote Ethernet -iquote Application -iquote Internet -Wall
 
@@ -19,7 +20,7 @@ OBJS=$(addprefix $(OBJDIR)/,wizchip_conf.o socket.o w5500.o \
 
 
 all:	$(OBJS)
-	ls $^
+	$(AR) rcs w5500.a $^
 
 $(OBJDIR)/%.o:	%.c
 	$(CC) $(CFLAGS) -c $< -o $@
