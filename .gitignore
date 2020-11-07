@@ -1,5 +1,6 @@
-# Wolfgangs build directory
+# Wolfgangs own stuff
 build
+w5500.a
 
 # Windows image file caches
 Thumbs.db
