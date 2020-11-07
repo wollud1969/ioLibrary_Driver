@@ -71,6 +71,10 @@ extern "C" {
 #define W5300						5300
 #define W5500						5500
 
+
+#define _WIZCHIP_ W5500
+
+
 #ifndef _WIZCHIP_
 #define _WIZCHIP_                      W5100S   // W5100, W5100S, W5200, W5300, W5500
 #endif

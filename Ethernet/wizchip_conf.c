@@ -80,7 +80,7 @@ void 	  wizchip_cris_exit(void)          {}
  * null function is called.
  */
 //void 	wizchip_cs_select(void)            {};
-void 	wizchip_cs_select(void)            {}
+__attribute__((weak)) void 	wizchip_cs_select(void)            {}
 
 /**
  * @brief Default function to deselect chip.
@@ -88,7 +88,7 @@ void 	wizchip_cs_select(void)            {}
  * null function is called.
  */
 //void 	wizchip_cs_deselect(void)          {};
-void 	wizchip_cs_deselect(void)          {}
+__attribute__((weak)) void wizchip_cs_deselect(void)          {}
 
 /**
  * @brief Default function to read in direct or indirect interface.
@@ -114,7 +114,7 @@ void 	wizchip_bus_writedata(uint32_t AddrSel, iodata_t wb)  { *((volatile iodata
  * null function is called.
  */
 //uint8_t wizchip_spi_readbyte(void)        {return 0;};
-uint8_t wizchip_spi_readbyte(void)        {return 0;}
+__attribute__((weak)) uint8_t wizchip_spi_readbyte(void)        {return 0;}
 
 /**
  * @brief Default function to write in SPI interface.
@@ -122,7 +122,7 @@ uint8_t wizchip_spi_readbyte(void)        {return 0;}
  * null function is called.
  */
 //void 	wizchip_spi_writebyte(uint8_t wb) {};
-void 	wizchip_spi_writebyte(uint8_t wb) {}
+__attribute__((weak)) void 	wizchip_spi_writebyte(uint8_t wb) {}
 
 /**
  * @brief Default function to burst read in SPI interface.
@@ -130,7 +130,7 @@ void 	wizchip_spi_writebyte(uint8_t wb) {}
  * null function is called.
  */
 //void 	wizchip_spi_readburst(uint8_t* pBuf, uint16_t len) 	{}; 
-void 	wizchip_spi_readburst(uint8_t* pBuf, uint16_t len) 	{}
+__attribute__((weak)) void 	wizchip_spi_readburst(uint8_t* pBuf, uint16_t len) 	{}
 
 /**
  * @brief Default function to burst write in SPI interface.
@@ -138,7 +138,7 @@ void 	wizchip_spi_readburst(uint8_t* pBuf, uint16_t len) 	{}
  * null function is called.
  */
 //void 	wizchip_spi_writeburst(uint8_t* pBuf, uint16_t len) {};
-void 	wizchip_spi_writeburst(uint8_t* pBuf, uint16_t len) {}
+__attribute__((weak)) void 	wizchip_spi_writeburst(uint8_t* pBuf, uint16_t len) {}
 
 /**
  * @\ref _WIZCHIP instance
