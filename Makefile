@@ -4,7 +4,12 @@ AR=arm-none-eabi-ar
 CFLAGS=-iquote Ethernet -iquote Application -iquote Internet -Wall
 
 OBJDIR=build
-VPATH=Ethernet:Ethernet/W5500:Internet/DHCP:Internet/DNS:Internet/MQTT:Internet/MQTT/MQTTPacket/src:Internet/httpServer:Internet/SNTP
+VPATH=Ethernet:Ethernet/W5500
+VPATH+=Internet/DHCP
+VPATH+=Internet/DNS
+VPATH+=Internet/MQTT:Internet/MQTT/MQTTPacket/src
+VPATH+=Internet/httpServer
+VPATH+=Internet/SNTP
 
 OBJS=$(addprefix $(OBJDIR)/,wizchip_conf.o socket.o w5500.o \
   dhcp.o \
